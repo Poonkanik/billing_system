@@ -1,0 +1,16 @@
+{
+  "name": "restaurant-pos",
+  "version": "1.0.0",
+  "description": "Full Stack Restaurant POS — React + Node.js + MongoDB",
+  "scripts": {
+    "install:all": "cd backend && npm install && cd ../frontend && npm install",
+    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm start\"",
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "cd frontend && npm start",
+    "seed": "cd backend && node -e \"require('dotenv').config(); const axios = require('axios'); axios.post('http://localhost:5000/api/auth/seed').then(r=>console.log(r.data)).catch(e=>console.error(e.message))\"",
+    "build": "cd frontend && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
